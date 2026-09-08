@@ -1,0 +1,294 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Montserrat", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-pink: var(--pink);
+  --color-pink-light: var(--pink-light);
+  --color-pink-deep: var(--pink-deep);
+  --color-dark: var(--dark);
+  --color-marble: var(--marble);
+  /* aliases for old component usage */
+  --color-cream: var(--marble);
+  --color-noir: var(--dark);
+  --color-petal: var(--pink-light);
+  --color-rose: var(--pink-deep);
+  --color-sage: var(--gold);
+  --color-ivory: var(--marble);
+  --color-espresso: var(--dark);
+  --color-blush: var(--pink-light);
+  --color-mauve: var(--pink-deep);
+  --color-taupe: #a07080;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Lux Pink palette (matching HTML mockup) — see src/config/business.config.ts theme.* for the config-driven colors */
+  --pink: #e87fac;
+  --pink-light: #f9e8f0;
+  --pink-mid: #f2c5d8;
+  --pink-deep: #c4527e;
+  --gold: #c9a96e;
+  --gold-light: #f0e6d0;
+  --marble: #f7f5f3;
+  --dark: #2a1a20;
+
+  /* system tokens */
+  --background: #ffffff;
+  --foreground: var(--dark);
+  --card: #ffffff;
+  --card-foreground: var(--dark);
+  --popover: #ffffff;
+  --popover-foreground: var(--dark);
+  --primary: var(--pink);
+  --primary-foreground: #ffffff;
+  --secondary: var(--pink-light);
+  --secondary-foreground: var(--dark);
+  --muted: var(--pink-light);
+  --muted-foreground: #a07080;
+  --accent: var(--pink-mid);
+  --accent-foreground: var(--dark);
+  --destructive: #c4527e;
+  --destructive-foreground: #ffffff;
+  --border: #f0d8e4;
+  --input: #f9e8f0;
+  --ring: var(--pink);
+  --gold-foreground: var(--dark);
+
+  /* gradient used in hero */
+  --gradient-hero: var(--pink-light);
+  --shadow-soft: 0 10px 40px -15px rgba(200, 80, 120, 0.18);
+  --shadow-card: 0 4px 20px -8px rgba(200, 80, 120, 0.12);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #fff;
+    color: var(--dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+@utility font-serif {
+  font-family: var(--font-serif);
+}
+@utility font-sans {
+  font-family: var(--font-sans);
+}
+
+@keyframes klassy-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-up {
+  animation: klassy-fade-up 0.9s ease-out both;
+}
+
+/* ── Brand tokens ────────────────────────────────────── */
+:root {
+  --klassy-rosa:  #ffa8c6;
+  --klassy-cream: #feeff2;
+  --klassy-gold:  #d9b850;
+  --klassy-sage:  #73815e;
+  --klassy-dark:  #2a1a20;
+}
+
+/* ── Keyframe animations ─────────────────────────────── */
+@keyframes kFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes kFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes kSlideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes kSlideRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes kScaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes kFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes kSparkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+  50%       { opacity: 1;   transform: scale(1.2) rotate(180deg); }
+}
+@keyframes kLineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes kPulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217,184,80,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(217,184,80,0); }
+}
+
+/* ── Scroll-reveal ───────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal="left"] {
+  transform: translateX(-32px);
+}
+[data-reveal="left"].is-visible {
+  transform: translateX(0);
+}
+[data-reveal="right"] {
+  transform: translateX(32px);
+}
+[data-reveal="right"].is-visible {
+  transform: translateX(0);
+}
+[data-reveal="scale"] {
+  transform: scale(0.94);
+}
+[data-reveal="scale"].is-visible {
+  transform: scale(1);
+}
+[data-delay="1"] { transition-delay: 0.1s; }
+[data-delay="2"] { transition-delay: 0.2s; }
+[data-delay="3"] { transition-delay: 0.35s; }
+[data-delay="4"] { transition-delay: 0.5s; }
+[data-delay="5"] { transition-delay: 0.65s; }
+
+/* ── Image hover zoom ────────────────────────────────── */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.7s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* ── Sparkle decorations ─────────────────────────────── */
+.sparkle {
+  display: inline-block;
+  animation: kSparkle 2.4s ease-in-out infinite;
+}
+.sparkle:nth-child(2) { animation-delay: 0.8s; }
+.sparkle:nth-child(3) { animation-delay: 1.6s; }
+
+/* ── Float ───────────────────────────────────────────── */
+.float {
+  animation: kFloat 4s ease-in-out infinite;
+}
+
+/* ── Tabs ─────────────────────────────────────────────── */
+.tab-line {
+  padding: 0.625rem 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a07080;
+  border-bottom: 2px solid transparent;
+  border-top: none; border-left: none; border-right: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+.tab-line:hover { color: var(--dark); }
+.tab-line.is-active {
+  color: var(--dark);
+  border-bottom-color: var(--pink);
+  font-weight: 600;
+}
+
+/* ── Primary pink button ─────────────────────────────── */
+.btn-k {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+.btn-k:hover { background: var(--pink-light); }
+
+.btn-k.gold,
+.btn-k.filled {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #ffffff;
+}
+.btn-k.gold:hover,
+.btn-k.filled:hover { background: var(--pink-deep); border-color: var(--pink-deep); }
+
+.btn-k.dark {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: #ffffff;
+}
+.btn-k.dark:hover { background: #3d2530; border-color: #3d2530; }
+
+.btn-k:disabled { opacity: 0.38; cursor: not-allowed; pointer-events: none; }
