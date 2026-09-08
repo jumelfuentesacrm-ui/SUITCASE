@@ -21,7 +21,7 @@ function fmtDateLong(d: string): string {
 }
 
 // Best-effort WhatsApp admin notification — a no-op until WHATSAPP_* env vars
-// exist (see KLASSY-SETUP-GUIA/README.md section 5). Never throws.
+// exist (see SETUP.md section 5). Never throws.
 async function notifyAdminWhatsApp(record: { name: string; service?: string; date: string; time: string }) {
   try {
     const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID;

@@ -13,20 +13,22 @@ export const Route = createFileRoute("/servicios/cabinas/")({
   component: CabinasPage,
 });
 
+// Ejemplo — reemplaza con las cabinas/profesionales reales del cliente
+// (nombre, especialidad, foto, datos de contacto directo).
 const CABINAS = [
   {
-    slug: "believe-esthetic",
-    name: "Believe Esthetic",
+    slug: "cabina-1",
+    name: "Cabina 1",
     tag: "Estética & Cuidado de la Piel",
     desc: "Limpiezas faciales profundas, tratamientos personalizados e hidratación para la piel.",
-    img: "/klassy/salon-02.jpg",
+    img: "/brand/cabina-1.jpg",
   },
   {
-    slug: "beauty-by-eliz",
-    name: "Beauty By Eliz",
+    slug: "cabina-2",
+    name: "Cabina 2",
     tag: "Pestañas & Cejas",
     desc: "Extensiones de pestañas y diseño de cejas con acabado personalizado y profesional.",
-    img: "/klassy/salon-01.jpg",
+    img: "/brand/cabina-2.jpg",
   },
 ];
 
@@ -41,10 +43,10 @@ function CabinasPage() {
       <Navbar />
 
       <section style={{ position: "relative", minHeight: "clamp(240px,34vw,360px)", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src="/klassy/salon-01.jpg" alt={`Cabinas ${business.name}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src="/brand/servicios-cabinas.jpg" alt={`Cabinas ${business.name}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(42,26,32,0.85) 0%, rgba(42,26,32,0.15) 100%)" }} />
         <div style={{ position: "relative", zIndex: 10, padding: "0 2rem 3rem", maxWidth: 1280, margin: "0 auto", width: "100%", paddingTop: 110 }}>
-          <p style={{ fontFamily: "'Cinzel', serif", fontSize: 9, letterSpacing: "5px", color: "#d9b850", marginBottom: 12, textTransform: "uppercase" }}>{business.name} · Carolina, PR</p>
+          <p style={{ fontFamily: "'Cinzel', serif", fontSize: 9, letterSpacing: "5px", color: "#d9b850", marginBottom: 12, textTransform: "uppercase" }}>{business.name} · {business.legalCity}</p>
           <h1 style={{ fontFamily: ffS, fontSize: "clamp(28px,5vw,48px)", fontWeight: 400, color: "#fff", margin: "0 0 14px", lineHeight: 1.2 }}>Cabinas</h1>
           <p style={{ fontFamily: ffB, fontSize: "clamp(14px,2vw,17px)", fontStyle: "italic", color: "rgba(255,255,255,0.75)" }}>
             {`Profesionales independientes dentro de ${business.name}.`}

@@ -56,7 +56,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     `PRODID:-//${process.env.BUSINESS_NAME || "Negocio"}//Bookings//ES`,
     "CALSCALE:GREGORIAN",
     "BEGIN:VEVENT",
-    `UID:${booking.id}@klassysalonpr.com`,
+    `UID:${booking.id}@example.com`,
     `DTSTAMP:${start}Z`,
     `DTSTART:${start}`,
     `DTEND:${end}`,
@@ -68,6 +68,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   ].join("\r\n");
 
   res.setHeader("Content-Type", "text/calendar; charset=utf-8");
-  res.setHeader("Content-Disposition", `attachment; filename="cita-klassy-salon.ics"`);
+  res.setHeader("Content-Disposition", `attachment; filename="cita.ics"`);
   return res.status(200).send(ics);
 }

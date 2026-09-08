@@ -3,15 +3,15 @@ import { useState } from "react";
 import { business } from "@/config/business.config";
 
 const NAIL_GALLERY = [
-  "/klassy/nail-catseye-blue.jpg",
-  "/klassy/nail-mixed-art.jpg",
-  "/klassy/nail-zebra-brown.jpg",
-  "/klassy/nail-chrome-black.jpg",
-  "/klassy/nail-stripe-wine.jpg",
-  "/klassy/nail-stripe-marine.jpg",
-  "/klassy/nail-bow-floral.jpg",
-  "/klassy/nail-french-stripe.jpg",
-  "/klassy/nail-celestial-gold.jpg",
+  "/brand/gallery-manicure-1.jpg",
+  "/brand/gallery-manicure-2.jpg",
+  "/brand/gallery-manicure-3.jpg",
+  "/brand/gallery-manicure-4.jpg",
+  "/brand/gallery-manicure-5.jpg",
+  "/brand/gallery-manicure-6.jpg",
+  "/brand/gallery-manicure-7.jpg",
+  "/brand/gallery-manicure-8.jpg",
+  "/brand/gallery-manicure-9.jpg",
 ];
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/servicios/manicure")({
   head: () => ({
     meta: [
       { title: `Manicure en ${business.legalCity} | ${business.name}` },
-      { name: "description", content: "Manicure profesional en Carolina, PR. Rubber Base, Builder Gel, Gel Tips. Desde $20. Frente a Plaza Carolina. ⭐ 5.0." },
-      { name: "keywords", content: "manicure carolina puerto rico, rubber base carolina pr, builder gel carolina, gel tips puerto rico" },
-      { property: "og:image", content: "/klassy/inspo-1.jpg" },
+      { name: "description", content: `Manicure profesional en ${business.legalCity}. Rubber Base, Builder Gel, Gel Tips. Desde $20.` },
+      { name: "keywords", content: "manicure, rubber base, builder gel, gel tips" },
+      { property: "og:image", content: "/brand/gallery-manicure-1.jpg" },
     ],
   }),
   component: ManicurePage,
@@ -89,11 +89,11 @@ function ManicurePage() {
       <Navbar />
       <main style={{ paddingTop: "80px" }}>
         <section className="relative flex items-end" style={{ minHeight: "clamp(260px,40vw,400px)", background: "#1a0f14", overflow: "hidden" }}>
-          <img src="/klassy/inspo-1.jpg" alt={`Manicure ${business.name}`} className="absolute inset-0 w-full h-full object-cover" style={{ opacity: 0.5 }} />
+          <img src="/brand/gallery-manicure-1.jpg" alt={`Manicure ${business.name}`} className="absolute inset-0 w-full h-full object-cover" style={{ opacity: 0.5 }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,15,20,0.9) 0%, rgba(26,15,20,0.2) 100%)" }} />
           <div className="relative z-10 px-6 sm:px-10 pb-10 max-w-3xl">
             <a href="/" style={{ fontSize: 10, letterSpacing: "2px", color: "#c9a96e", fontFamily: "'Montserrat', sans-serif", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", marginBottom: "1rem" }}>← INICIO</a>
-            <p style={{ fontSize: 9, letterSpacing: "5px", color: "#c9a96e", fontWeight: 600, fontFamily: "'Montserrat', sans-serif", marginBottom: "0.5rem" }}>KLASSY SALON · CAROLINA, PR</p>
+            <p style={{ fontSize: 9, letterSpacing: "5px", color: "#c9a96e", fontWeight: 600, fontFamily: "'Montserrat', sans-serif", marginBottom: "0.5rem" }}>{business.shortName.toUpperCase()} · {business.legalCity}</p>
             <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(34px,6vw,54px)", fontWeight: 300, color: "#fff", lineHeight: 1.1, marginBottom: "0.5rem" }}>Manicuras</h1>
             <p style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", fontFamily: "'Montserrat', sans-serif" }}>Gel · Builder · Geltips · Color · Remoción</p>
           </div>

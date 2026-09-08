@@ -36,16 +36,20 @@ export function Footer() {
         {/* Brand — fully centered, links to admin */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", marginBottom: "3rem" }}>
           <a href="/admin" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
-            <img src="/klassy/dragonfly.svg" alt="" aria-hidden="true" style={{ width: 32, height: 32, filter: "brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />
+            <img src="/brand/mark.svg" alt="" aria-hidden="true" style={{ width: 32, height: 32, filter: "brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />
             <div style={{ textAlign: "center" }}>
               <div style={{ fontFamily: "'Cinzel Decorative', serif", fontSize: 18, color: "#ffa8c6", fontWeight: 400, lineHeight: 1 }}>{business.shortName}</div>
               <div style={{ fontFamily: "'Cinzel', serif", fontSize: 8, letterSpacing: "5px", color: "#d9b850", textTransform: "uppercase", marginTop: 3 }}>{business.tagline}</div>
             </div>
           </a>
-          {/* TODO(suitcase): "siempre-klassy-logo.png" is a client-specific wordmark image; swap or remove per client */}
-          <a href="/admin" style={{ display: "inline-block" }}>
-            <img src="/klassy/siempre-klassy-logo.png" alt={business.name} style={{ width: 180, height: "auto", display: "block" }} />
-          </a>
+          {/* Optional wordmark image below the icon+name lockup above — most
+              rebrands won't need both, so this is off unless the client has
+              a dedicated wordmark file. Point it at /public/brand/logo-wordmark.png. */}
+          {business.brandBadge && (
+            <a href="/admin" style={{ display: "inline-block" }}>
+              <img src="/brand/logo-wordmark.png" alt={business.name} style={{ width: 180, height: "auto", display: "block" }} />
+            </a>
+          )}
         </div>
 
         {/* Links — 2 columns, centered */}

@@ -19,21 +19,22 @@ export function About() {
             style={{ position: "relative", width: "100%", overflow: "hidden" }}
           >
             <img
-              src="/klassy/about-neon-hair.jpg"
+              src="/brand/about-photo.jpg"
               alt={business.name}
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 360 }}
               loading="lazy"
             />
-            {/* Dragonfly badge — "Siempre Klassy" is a wordplay tagline unique
-                to this client's brand name; not driven by config. */}
-            {/* TODO(suitcase): hardcoded brand wordplay, review per client */}
-            <div style={{ position: "absolute", bottom: "1.5rem", right: "1.5rem", background: "rgba(26,15,20,0.85)", backdropFilter: "blur(6px)", padding: "1.1rem 1.25rem", display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <span style={{ fontSize: 20, color: "#f4ff3d", textShadow: "0 0 6px rgba(244,255,61,0.6)" }} className="float">✦</span>
-              <div>
-                <div style={{ fontFamily: "'Cinzel Decorative', serif", fontSize: 11, color: "#f4ff3d", lineHeight: 1.2, textShadow: "0 0 6px rgba(244,255,61,0.6)" }}>Siempre</div>
-                <div style={{ fontFamily: "'Cinzel Decorative', serif", fontSize: 11, color: "#f4ff3d", lineHeight: 1.2, textShadow: "0 0 6px rgba(244,255,61,0.6)" }}>Klassy.</div>
+            {/* Optional brand-wordplay badge, fully driven by business.brandBadge.
+                Empty by default — set it in business.config.ts (e.g. "Siempre {shortName}")
+                to show it here, or leave blank to hide the badge entirely. */}
+            {business.brandBadge && (
+              <div style={{ position: "absolute", bottom: "1.5rem", right: "1.5rem", background: "rgba(26,15,20,0.85)", backdropFilter: "blur(6px)", padding: "1.1rem 1.25rem", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                <span style={{ fontSize: 20, color: "#f4ff3d", textShadow: "0 0 6px rgba(244,255,61,0.6)" }} className="float">✦</span>
+                <div style={{ fontFamily: "'Cinzel Decorative', serif", fontSize: 11, color: "#f4ff3d", lineHeight: 1.2, textShadow: "0 0 6px rgba(244,255,61,0.6)" }}>
+                  {business.brandBadge}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 

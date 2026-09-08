@@ -10,10 +10,10 @@ export const Route = createFileRoute("/nosotras")({
     meta: [
       { title: `Nosotras | ${business.name} — Equipo de Técnicas en ${business.legalCity}` },
       { name: "description", content: `Conoce el equipo de ${business.name} en ${business.legalCity}. Técnicas especializadas en uñas, cabello y estética. Más de 5 años mimando a nuestras clientas.` },
-      { name: "keywords", content: "klassy salon equipo carolina pr, tecnicas unas carolina puerto rico, salon belleza carolina pr nosotras" },
+      { name: "keywords", content: "salon equipo, tecnicas unas, salon belleza nosotras" },
       { property: "og:title", content: `Nosotras | ${business.name}` },
       { property: "og:description", content: `El equipo detrás de ${business.name} en ${business.legalCity}.` },
-      { property: "og:image", content: "/klassy/inspo-2.jpg" },
+      { property: "og:image", content: "/brand/nosotras-hero.jpg" },
     ],
   }),
   component: NosotrasPage,
@@ -60,7 +60,7 @@ function NosotrasPage() {
 
       {/* Hero */}
       <section style={{ position: "relative", minHeight: "clamp(280px,40vw,420px)", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src="/klassy/salon-manicure-station.jpg" alt={`${business.name} equipo`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src="/brand/nosotras-hero.jpg" alt={`${business.name} equipo`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(42,26,32,0.82) 0%, rgba(42,26,32,0.1) 100%)" }} />
         <div style={{ position: "relative", zIndex: 10, width: "100%", paddingTop: 120 }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 2rem 3rem", textAlign: "center" }}>

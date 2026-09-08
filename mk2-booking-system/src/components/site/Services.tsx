@@ -1,13 +1,15 @@
 import { business } from "@/config/business.config";
 
-// TODO(suitcase): these 4 cards map 1:1 to the /servicios/* route files
-// (manicure, pedicure, cabello, cabinas) which are themselves example
-// content — a real rebrand may need different category routes entirely.
+// These 4 cards map 1:1 to the /servicios/* route files (manicure, pedicure,
+// cabello, cabinas) — generic salon categories, not tied to any client's
+// brand. A real rebrand may still need different category routes entirely;
+// the image paths below are placeholders under /public/brand/ (see
+// public/README-ASSETS.txt).
 const CATEGORIES = [
-  { id: "manicure",  label: "Manicuras",   sub: "Gel · Builder · Geltips · Color",       img: "/klassy/nails-03.jpg", href: "/servicios/manicure" },
-  { id: "pedicure",  label: "Pedicuras",   sub: "Sencilla · Cambio de Color",             img: "/klassy/champagne-01.jpg", href: "/servicios/pedicure" },
-  { id: "cabello",   label: "Cabello",     sub: "Color · Corte · FIOS · Keratina",        img: "/klassy/hair-cabello.jpg", href: "/servicios/cabello" },
-  { id: "cabinas",   label: "Cabinas",     sub: "Profesionales independientes",           img: "/klassy/salon-01.jpg", href: "/servicios/cabinas" },
+  { id: "manicure",  label: "Manicuras",   sub: "Gel · Builder · Geltips · Color",       img: "/brand/servicios-manicure.jpg", href: "/servicios/manicure" },
+  { id: "pedicure",  label: "Pedicuras",   sub: "Sencilla · Cambio de Color",             img: "/brand/servicios-pedicure.jpg", href: "/servicios/pedicure" },
+  { id: "cabello",   label: "Cabello",     sub: "Color · Corte · FIOS · Keratina",        img: "/brand/servicios-cabello.jpg", href: "/servicios/cabello" },
+  { id: "cabinas",   label: "Cabinas",     sub: "Profesionales independientes",           img: "/brand/servicios-cabinas.jpg", href: "/servicios/cabinas" },
 ];
 
 export function Services() {

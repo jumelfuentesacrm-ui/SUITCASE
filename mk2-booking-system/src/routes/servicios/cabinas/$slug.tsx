@@ -14,12 +14,13 @@ type Cabina = {
   description: string;
 };
 
+// Ejemplo — reemplaza con las cabinas/profesionales reales del cliente.
 const CABINAS: Record<string, Cabina> = {
-  "believe-esthetic": {
-    slug: "believe-esthetic",
-    name: "Believe Esthetic",
+  "cabina-1": {
+    slug: "cabina-1",
+    name: "Cabina 1",
     tag: "Estética & Cuidado de la Piel",
-    img: "/klassy/salon-02.jpg",
+    img: "/brand/cabina-1.jpg",
     serviceType: "Centro de estética y cuidado de la piel (Esthetic / Skin Care & Wellness).",
     services: [
       "Limpiezas faciales profundas",
@@ -30,17 +31,17 @@ const CABINAS: Record<string, Cabina> = {
       "Servicios estéticos enfocados en mejorar la salud y apariencia del rostro",
     ],
     contact: [
-      { label: "Dirección", value: "Urb. Villa Fontana, Ave. Jesús M. Fragoso, #3, KS-5 Ofc. 1, Carolina, Puerto Rico 00983" },
+      { label: "Dirección", value: "Dirección de la cabina" },
       { label: "Reservas", value: "A través de Booksy" },
     ],
     description:
-      "Believe Esthetic es un centro de estética ubicado en Carolina, Puerto Rico, dedicado al cuidado integral de la piel. Se especializa en tratamientos faciales personalizados que buscan mejorar la salud, apariencia y bienestar de la piel mediante técnicas profesionales y atención individualizada, brindando a cada cliente una experiencia enfocada en resultados y autocuidado.",
+      "Cabina de estética dedicada al cuidado integral de la piel. Se especializa en tratamientos faciales personalizados que buscan mejorar la salud, apariencia y bienestar de la piel mediante técnicas profesionales y atención individualizada.",
   },
-  "beauty-by-eliz": {
-    slug: "beauty-by-eliz",
-    name: "Beauty By Eliz",
+  "cabina-2": {
+    slug: "cabina-2",
+    name: "Cabina 2",
     tag: "Pestañas & Cejas",
-    img: "/klassy/salon-01.jpg",
+    img: "/brand/cabina-2.jpg",
     serviceType: "Extensiones de pestañas y diseño de cejas.",
     services: [
       "Extensiones de pestañas",
@@ -49,11 +50,11 @@ const CABINAS: Record<string, Cabina> = {
       "Laminado de cejas",
     ],
     contact: [
-      { label: "Teléfono", value: "+1 (787) 235-1068", href: "tel:+17872351068" },
-      { label: "Instagram", value: "@_beautybyeliz_", href: "https://instagram.com/_beautybyeliz_" },
+      { label: "Teléfono", value: "(787) 000-0000", href: "tel:+17870000000" },
+      { label: "Instagram", value: "@usuario", href: "https://instagram.com/" },
     ],
     description:
-      "Beauty By Eliz ofrece servicios especializados de extensiones de pestañas y diseño de cejas para realzar tu belleza natural con un acabado personalizado y profesional. Para agendar una cita o solicitar más información, comunícate directamente con Beauty By Eliz mediante su teléfono o Instagram.",
+      "Cabina especializada en extensiones de pestañas y diseño de cejas para realzar tu belleza natural con un acabado personalizado y profesional. Para agendar una cita o solicitar más información, comunícate directamente usando los datos de contacto.",
   },
 };
 

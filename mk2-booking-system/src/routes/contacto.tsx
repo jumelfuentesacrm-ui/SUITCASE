@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contacto")({
     meta: [
       { title: `Contacto | ${business.name} — ${business.legalCity} · ${business.phoneDisplay}` },
       { name: "description", content: `Contacta a ${business.name} en ${business.legalCity}. Llámanos al ${business.phoneDisplay}, escríbenos por WhatsApp o visítanos frente a Plaza ${business.legalCity.split(",")[0]}. Walk-ins bienvenidos.` },
-      { name: "keywords", content: "klassy salon contacto, salon carolina puerto rico telefono, nail salon carolina pr direccion, frente plaza carolina salon" },
+      { name: "keywords", content: "salon contacto, salon telefono, nail salon direccion" },
       { property: "og:title", content: `Contacto | ${business.name}` },
       { property: "og:description", content: `${business.name} · ${business.legalCity} · ${business.phoneDisplay} · Frente a Plaza ${business.legalCity.split(",")[0]}` },
     ],
@@ -45,8 +45,8 @@ const CONTACTS = [
     external: true,
   },
   {
-    label: "@klassysalon.pr",
-    sub: "Instagram",
+    label: "Instagram",
+    sub: "Síguenos",
     href: INSTAGRAM_URL,
     icon: "M3 3h18v18H3zM12 8a4 4 0 100 8 4 4 0 000-8zM17.5 6.5h.01",
     external: true,
@@ -60,11 +60,11 @@ function ContactoPage() {
 
       {/* Hero */}
       <section style={{ position: "relative", minHeight: "clamp(260px,38vw,400px)", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src="/klassy/neon-siempre-klassy.jpg" alt={`Siempre ${business.shortName}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src="/brand/contacto-hero.jpg" alt={`${business.name}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(42,26,32,0.85) 0%, rgba(42,26,32,0.2) 100%)" }} />
         <div style={{ position: "relative", zIndex: 10, width: "100%", paddingTop: 120 }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 2rem 3rem", textAlign: "center" }}>
-            <p style={{ fontFamily: "'Cinzel', serif", fontSize: 9, letterSpacing: "5px", color: GOLD, marginBottom: 16, textTransform: "uppercase" }}>{business.name} · Carolina PR</p>
+            <p style={{ fontFamily: "'Cinzel', serif", fontSize: 9, letterSpacing: "5px", color: GOLD, marginBottom: 16, textTransform: "uppercase" }}>{business.name} · {business.legalCity}</p>
             <h1 style={{ fontFamily: ffS, fontSize: "clamp(28px,5vw,52px)", fontWeight: 400, color: "#fff", margin: "0 0 16px", lineHeight: 1.2 }}>Contáctanos</h1>
             <p style={{ fontFamily: ffB, fontSize: "clamp(15px,2vw,18px)", fontStyle: "italic", color: "rgba(255,255,255,0.78)", lineHeight: 1.8 }}>Estamos aquí para ayudarte. Walk-ins siempre bienvenidos.</p>
           </div>

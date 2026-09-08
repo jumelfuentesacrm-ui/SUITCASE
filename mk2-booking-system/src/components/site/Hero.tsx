@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { business } from "@/config/business.config";
 
 const SLIDES = [
-  { src: "/klassy/luis-hero-reception.jpg" },
-  { src: "/klassy/luis-hero-nails-champagne.jpg" },
-  { src: "/klassy/luis-hero-hair-straight.jpg" },
-  { src: "/klassy/luis-hero-desk-flowers.jpg" },
+  { src: "/brand/hero-slide-1.jpg" },
+  { src: "/brand/hero-slide-2.jpg" },
+  { src: "/brand/hero-slide-3.jpg" },
+  { src: "/brand/hero-slide-4.jpg" },
 ];
 
 const STATS = [

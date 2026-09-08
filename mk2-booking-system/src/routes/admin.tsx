@@ -1067,7 +1067,7 @@ const depositMsg=(_b:Booking,link:string,isNew:boolean=true)=>[
   link,
   '',
   '*ATH Movil Business:*',
-  '/klassysalonpr',
+  '/tu-usuario',
   '',
   'Una vez recibamos el comprobante de pago, tu cita quedara oficialmente confirmada.',
   '',

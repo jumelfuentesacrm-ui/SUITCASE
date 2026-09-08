@@ -1,11 +1,8 @@
 -- ============================================================================
--- KLASSY SALON — FULL DATABASE SCHEMA
+-- MK2 BOOKING SYSTEM — FULL DATABASE SCHEMA
 -- Run this ONCE in a fresh Supabase project's SQL Editor to recreate every
--- table this app needs. Generated from a live export of the production DB
--- (information_schema.columns) — this is the single source of truth for
--- setting up a new clone/template. The two older partial files
--- (supabase-klassy.sql, supabase-migration-new-tables.sql) are now superseded
--- by this one; kept only for history.
+-- table this app needs. This is the single source of truth for setting up
+-- a new clone/template.
 --
 -- After running this:
 --   1. Auth: profiles.id must match a real auth.users.id (Supabase Auth) —
@@ -245,12 +242,12 @@ create table if not exists promo_days (
 -- 14. SALON_SETTINGS — single-row salon config (Configuración panel).
 create table if not exists salon_settings (
   id uuid primary key default gen_random_uuid(),
-  salon_name text not null default 'Klassy Salon',
-  address text not null default '3KS-5 Cll Via Mirta local #1, Carolina, 00983, Puerto Rico',
-  phone text not null default '7876905963',
+  salon_name text not null default 'Nombre del Negocio',
+  address text not null default 'Calle Principal 123, Municipio, PR 00000',
+  phone text not null default '7870000000',
   email text not null default '',
-  instagram_url text not null default 'https://www.instagram.com/klassysalon.pr/',
-  booksy_url text not null default 'https://booksy.com/en-us/1482397_klassy-salon_nail-salon_34793_carolina',
+  instagram_url text not null default 'https://instagram.com/negocio',
+  booksy_url text not null default '',
   schedule_notes text not null default 'Lun-Mar 9am-7pm · Mié Cerrado · Jue-Vie 9am-7pm · Sáb 9am-6pm · Dom Cerrado',
   payment_methods text not null default 'Efectivo, Tarjeta de crédito/débito, ATH Móvil',
   policies_text text not null default 'Se requiere depósito para servicios de $50 o más.',
@@ -301,9 +298,9 @@ create policy if not exists "Admin full access" on salon_settings for all using 
 alter table specialist_schedules enable row level security;
 create policy if not exists "Admin full access" on specialist_schedules for all using (true);
 
--- Without this, the public site's anon key silently sees zero specialists
--- (this exact gap broke the original Klassy site once — profiles had RLS
--- enabled elsewhere with no permissive SELECT policy for anon).
+-- Without this, the public site's anon key silently sees zero specialists —
+-- profiles needs RLS enabled elsewhere with no permissive SELECT policy for
+-- anon, or the public list quietly comes back empty.
 alter table profiles enable row level security;
 create policy if not exists "Public can view active specialists" on profiles
   for select to anon using (role = 'specialist' and active = true);

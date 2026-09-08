@@ -13,7 +13,7 @@ export const Route = createFileRoute("/galeria")({
       { name: "keywords", content: "galería nail art carolina pr, manicure carolina puerto rico, uñas diseño carolina pr, nail salon carolina pr fotos" },
       { property: "og:title", content: `Galería | ${business.name}` },
       { property: "og:description", content: "Mira nuestros trabajos de manicure, pedicure y cabello en Carolina, PR." },
-      { property: "og:image", content: "/klassy/inspo-1.jpg" },
+      { property: "og:image", content: "/brand/galeria-1.jpg" },
     ],
   }),
   component: GaleriaPage,
@@ -25,14 +25,14 @@ const ffS  = "'Cinzel Decorative', serif";
 const ffB  = "'Cormorant Garamond', serif";
 
 const SALON = [
-  "/klassy/salon-02.jpg",
-  "/klassy/salon-manicure-station.jpg",
-  "/klassy/salon-pedicure.jpg",
-  "/klassy/neon-siempre-klassy.jpg",
-  "/klassy/salon-reception-desk.jpg",
-  "/klassy/salon-champagne-sink.jpg",
-  "/klassy/salon-welcome-card.jpg",
-  "/klassy/salon-styling-chairs.jpg",
+  "/brand/galeria-1.jpg",
+  "/brand/galeria-2.jpg",
+  "/brand/galeria-3.jpg",
+  "/brand/galeria-4.jpg",
+  "/brand/galeria-5.jpg",
+  "/brand/galeria-6.jpg",
+  "/brand/galeria-7.jpg",
+  "/brand/galeria-8.jpg",
 ];
 
 type Tab = "trabajos" | "salon";
@@ -48,7 +48,7 @@ function GaleriaPage() {
 
       {/* Header */}
       <section style={{ position: "relative", minHeight: "clamp(260px,38vw,400px)", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
-        <img src="/klassy/inspo-1.jpg" alt={`Galería ${business.name}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src="/brand/galeria-1.jpg" alt={`Galería ${business.name}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(42,26,32,0.85) 0%, rgba(42,26,32,0.15) 100%)" }} />
         <div style={{ position: "relative", zIndex: 10, width: "100%", paddingTop: 120 }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 2rem 3rem", textAlign: "center" }}>

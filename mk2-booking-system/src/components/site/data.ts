@@ -23,21 +23,21 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = business.serviceCategories;
 export const STAFF = business.staff;
 
 // ---- Assets de ejemplo ----
-// Estos paths apuntan a /public/brand/*. Ver public/README-ASSETS.txt para
-// la lista de archivos que un cliente nuevo debe suministrar. Las imágenes
-// de portafolio en /public/klassy/* se dejaron como demo visual; reemplázalas
-// o quítalas y actualiza PORTFOLIO con los nuevos nombres de archivo.
+// Estos paths apuntan a /public/brand/*, que se dejó vacío de fotos reales
+// a propósito. Ver public/README-ASSETS.txt para la lista completa de
+// archivos (nombre + dimensiones) que un cliente nuevo debe suministrar,
+// o actualiza PORTFOLIO con los nombres de archivo reales del cliente.
 export const LOGO_URL = business.logoUrl;
 export const HERO_PHOTO = business.heroImageUrl;
 export const PORTFOLIO = [
-  "/klassy/port-nails-butterfly.jpg",
-  "/klassy/port-nails-french-red.jpg",
-  "/klassy/port-nails-papaya.jpg",
-  "/klassy/port-hair-blonde-curls.jpg",
-  "/klassy/port-hair-dark-waves.jpg",
-  "/klassy/port-hair-blonde-straight.jpg",
-  "/klassy/port-nails-pink-orange.jpg",
-  "/klassy/port-nails-colorblock.jpg",
+  "/brand/portfolio-1.jpg",
+  "/brand/portfolio-2.jpg",
+  "/brand/portfolio-3.jpg",
+  "/brand/portfolio-4.jpg",
+  "/brand/portfolio-5.jpg",
+  "/brand/portfolio-6.jpg",
+  "/brand/portfolio-7.jpg",
+  "/brand/portfolio-8.jpg",
 ];
 
 export const INSTAGRAM_URL = business.instagramUrl;

@@ -86,7 +86,7 @@ function SobreNosotros() {
           <p style={{ fontFamily: ff, fontSize: 10, letterSpacing: "4px", color: "#c9a96e", marginBottom: 12, textTransform: "uppercase" }}>El salón</p>
           <h2 style={{ fontFamily: ffS, fontSize: "clamp(28px,4vw,44px)", fontWeight: 300, color: "#2a1a20", marginBottom: 40 }}>Nuestro espacio</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12 }}>
-            {["/klassy/inspo-1.jpg","/klassy/inspo-2.jpg","/klassy/inspo-3.jpg"].map((src, i) => (
+            {["/brand/sobre-nosotros-1.jpg","/brand/sobre-nosotros-2.jpg","/brand/sobre-nosotros-3.jpg"].map((src, i) => (
               <div key={i} onClick={() => window.open(INSTAGRAM_URL, "_blank", "noopener,noreferrer")} style={{ aspectRatio: i === 0 ? "4/3" : "1/1", overflow: "hidden", cursor: "pointer" }}>
                 <img src={src} alt={`${business.name}`} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform .4s" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}

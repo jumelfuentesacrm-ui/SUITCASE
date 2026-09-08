@@ -9,14 +9,14 @@ const STATS = [
   { value: `${business.staff.length}+`, label: "Especialistas" },
 ];
 
-export function WhyKlassy() {
+export function WhySection() {
   const sectionRef = useScrollReveal() as RefObject<HTMLElement>;
 
   return (
     <section ref={sectionRef} style={{ background: "#feeff2" }}>
 
       {/* §2 — cream split: text left / photo right */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", minHeight: "clamp(480px,60vw,680px)" }} className="why-klassy-grid">
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", minHeight: "clamp(480px,60vw,680px)" }} className="why-section-grid">
 
         {/* Left — text */}
         <div
@@ -71,16 +71,19 @@ export function WhyKlassy() {
             style={{ width: "100%", height: "100%", position: "relative", boxShadow: "0 16px 64px rgba(42,26,32,0.14)" }}
           >
             <img
-              src="/klassy/why-klassy-hair.jpg"
+              src="/brand/why-section-photo.jpg"
               alt={business.name}
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               loading="lazy"
             />
-            {/* Gold accent badge */}
-            {/* TODO(suitcase): hardcoded brand wordplay ("Siempre Klassy"), review per client */}
-            <div style={{ position: "absolute", top: "1.5rem", left: "1.5rem", background: "#d9b850", padding: "0.4rem 0.9rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <span style={{ fontFamily: "'Cinzel', serif", fontSize: 8, letterSpacing: "3px", color: "#2a1a20", textTransform: "uppercase", fontWeight: 600 }}>Siempre Klassy</span>
-            </div>
+            {/* Optional brand-wordplay badge, fully driven by business.brandBadge.
+                Empty by default — set it in business.config.ts to show it, or
+                leave blank to hide this accent entirely. */}
+            {business.brandBadge && (
+              <div style={{ position: "absolute", top: "1.5rem", left: "1.5rem", background: "#d9b850", padding: "0.4rem 0.9rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                <span style={{ fontFamily: "'Cinzel', serif", fontSize: 8, letterSpacing: "3px", color: "#2a1a20", textTransform: "uppercase", fontWeight: 600 }}>{business.brandBadge}</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -106,8 +109,8 @@ export function WhyKlassy() {
 
       <style>{`
         @media (max-width: 768px) {
-          .why-klassy-grid { grid-template-columns: 1fr !important; }
-          .why-klassy-grid > div:last-child { min-height: 320px; }
+          .why-section-grid { grid-template-columns: 1fr !important; }
+          .why-section-grid > div:last-child { min-height: 320px; }
           .stats-strip { grid-template-columns: repeat(2,1fr) !important; }
         }
       `}</style>

@@ -28,8 +28,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     ],
     metadata: { deposit_id, booking_id, client_name, client_phone },
-    success_url: `${process.env.SITE_URL || "https://klassy.salon"}/pago-exitoso`,
-    cancel_url: `${process.env.SITE_URL || "https://klassy.salon"}/pago-cancelado`,
+    success_url: `${process.env.SITE_URL || "https://example.com"}/pago-exitoso`,
+    cancel_url: `${process.env.SITE_URL || "https://example.com"}/pago-cancelado`,
   });
 
   return res.status(200).json({ url: session.url });

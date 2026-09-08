@@ -1,4 +1,4 @@
-# MK2 Template — Sistema de Reservas Completo (basado en Klassy)
+# MK2 Template — Sistema de Reservas Completo
 
 Template técnico completo, genericizado a partir del sitio real de
 producción de un salón de belleza. Stack: **React 19 + TanStack Start
@@ -63,11 +63,9 @@ supabase/
   functions/send-push/        ← Edge Function de Web Push
 supabase-full-schema.sql      ← schema completo, punto de partida para un
                                  cliente nuevo (ver SETUP.md)
-supabase-luis-vip-and-catalogo.sql  ← migración "Horario VIP", opcional
-supabase-quickstart.sql, supabase-klassy.sql, supabase-migration-new-tables.sql
-                              ← versiones anteriores del schema, conservadas
-                                 solo como historial — no correrlas
-public/README-ASSETS.txt     ← qué imágenes reemplazar y con qué nombre/tamaño
+supabase-optional-vip-hours.sql  ← migración "Horario VIP", opcional
+public/README-ASSETS.txt     ← qué imágenes crear en /public/brand/ y con
+                                 qué nombre/tamaño (carpeta vacía por diseño)
 ```
 
 ## Regla de oro

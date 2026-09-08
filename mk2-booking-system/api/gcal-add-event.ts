@@ -12,13 +12,14 @@ function base64url(input: Buffer | string) {
 // Google Calendar's fixed color palette (colorId 1-11).
 // Assigned colors per specialist; unknown names fall back to a stable hash.
 const GCAL_COLOR_IDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
-// TODO(suitcase): hardcoded example staff names, move to src/config/business.config.ts
-// (staff[].gcalColorId) and read that here once this endpoint is bundled with
-// access to the client's business config. Unknown names already fall back to
-// a stable hash below, so this map is optional pinning, not required.
+// Optional pinning keyed to the generic placeholder staff names in this
+// template's src/config/business.config.ts (staff[].gcalColorId). Real
+// rebrand: read staff[].gcalColorId from business.config.ts once this
+// endpoint is bundled with access to it — unknown names already fall back
+// to a stable hash below, so this map is not required.
 const SPECIALIST_COLORS: Record<string, string> = {
-  especialista1: "4", // Flamingo — rosita
-  especialista2: "7", // Peacock — azul
+  "especialista 1": "4", // Flamingo — rosita
+  "especialista 2": "7", // Peacock — azul
 };
 function colorForSpecialist(name: string): string {
   if (!name) return "8"; // graphite — "sin asignar"

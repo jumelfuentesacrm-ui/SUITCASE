@@ -654,7 +654,7 @@ export function Booking({ preselected, onConsumePreselected }: {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
               GOOGLE CALENDAR
             </a>
-            <a href={ics} download="cita-klassy.ics" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", border: "1px solid " + PINK, color: PINK, fontFamily: ff, fontSize: 10, letterSpacing: "2px", textDecoration: "none", fontWeight: 500 }}>
+            <a href={ics} download="cita.ics" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", border: "1px solid " + PINK, color: PINK, fontFamily: ff, fontSize: 10, letterSpacing: "2px", textDecoration: "none", fontWeight: 500 }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
               APPLE / ICAL
             </a>

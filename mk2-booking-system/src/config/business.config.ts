@@ -39,13 +39,17 @@ export const business = {
   name: "Nombre del Negocio",
   shortName: "Negocio",
   tagline: "Uñas, Cabello & Spa",
+  // Badge/tagline corto para el wordplay de marca opcional que aparece en
+  // About/WhySection (ej. "Siempre {shortName}"). Déjalo vacío para ocultar
+  // el badge por completo.
+  brandBadge: "",
   legalCity: "Ciudad, Puerto Rico",
-  // NOTA: estos paths apuntan a los assets demo que quedaron en /public/klassy
-  // (ver public/README-ASSETS.txt). Reemplázalos por /brand/... con los
-  // assets reales del cliente cuando estén listos.
-  logoUrl: "/klassy/logo-new.png",
-  heroImageUrl: "/klassy/salon-interior.jpg",
-  faviconSvg: "/klassy/ks-icon.svg",
+  // NOTA: estos paths apuntan a placeholders — el cliente debe subir sus
+  // propios assets a /public/brand/ (ver public/README-ASSETS.txt para la
+  // lista completa de archivos requeridos y dimensiones).
+  logoUrl: "/brand/logo.png",
+  heroImageUrl: "/brand/hero.jpg",
+  faviconSvg: "/brand/favicon.svg",
 
   // ---- Contacto ----
   phone: "7870000000", // solo dígitos, con código de país, para tel:/wa.me
@@ -99,7 +103,7 @@ export const business = {
     titleSuffix: "| Salón de belleza",
     description: "Agenda tu cita en línea en minutos.",
     keywords: "salon, belleza, citas en linea",
-    ogImage: "/klassy/salon-interior.jpg",
+    ogImage: "/brand/hero.jpg",
     siteUrl: "https://example.com",
     locale: "es_PR",
   },

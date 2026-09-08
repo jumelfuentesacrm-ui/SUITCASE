@@ -11,7 +11,7 @@ export function Gallery() {
   return (
     <section ref={sectionRef} id="galeria" style={{ background: "#fff" }}>
 
-      {/* Editorial header — like Phenix "Your Personal Canvas" */}
+      {/* Editorial header — magazine-style intro to the portfolio */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", padding: "clamp(3rem,6vw,5rem) clamp(2rem,6vw,5rem)" }} className="gallery-header">
         <div data-reveal="right">
           <span style={{ display: "block", fontSize: 9, letterSpacing: "5px", color: "#d9b850", fontWeight: 600, fontFamily: "'Cinzel', serif", marginBottom: "1.25rem", textTransform: "uppercase" }}>

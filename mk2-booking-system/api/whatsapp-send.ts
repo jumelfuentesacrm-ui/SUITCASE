@@ -1,6 +1,6 @@
 // Combined WhatsApp endpoint: outbound template sends (client-facing
 // confirmación/recordatorio/reagendada/cancelada — not wired in anywhere
-// yet, pending Meta template approval, see KLASSY-SETUP-GUIA/README.md
+// yet, pending Meta template approval, see SETUP.md
 // section 5) + the Meta webhook verification/event receiver (merged in
 // from api/whatsapp-webhook.ts, which was its own function until that
 // extra function pushed the project over Vercel's function-count limit

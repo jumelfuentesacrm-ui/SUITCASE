@@ -45,26 +45,16 @@ Junta esto ANTES de crear el proyecto en Supabase:
 
 ## 2. Supabase — correr el schema (2 min)
 
-Este repo trae varios archivos `.sql` en la raíz — son historial real del
-proyecto original, no opciones intercambiables. Para un cliente **nuevo**,
+Este repo trae dos archivos `.sql` en la raíz. Para un cliente **nuevo**,
 corre en este orden:
 
 1. **`supabase-full-schema.sql`** — el schema completo y actual (tablas,
    RLS, políticas). Es la base; NO trae datos de servicios de ejemplo, así
-   que no hay que limpiar nada de Klassy después. Pégalo entero en
+   que no hay que limpiar catálogo de nadie después. Pégalo entero en
    **SQL Editor → New query → Run**.
-2. **`supabase-luis-vip-and-catalogo.sql`, sección 1 solamente** (columnas
-   `is_vip` / `vip_surcharge` en `bookings`) — sólo si el cliente va a usar
-   la función de "Horario VIP" (franjas fuera de horario con recargo). El
-   resto de ese archivo (sección 2 en adelante) inserta el catálogo de
-   servicios REAL de Klassy — sáltalo para un cliente nuevo, o úsalo como
-   referencia del formato de INSERT si vas a cargar servicios por SQL.
-3. Ignora `supabase-quickstart.sql`, `supabase-klassy.sql` y
-   `supabase-migration-new-tables.sql` — son versiones anteriores/parciales
-   del mismo schema, superadas por `supabase-full-schema.sql` (ver el
-   comentario en la cabecera de ese archivo). Se conservan solo por
-   historial; no correrlas junto con `supabase-full-schema.sql` o vas a
-   pelear con tablas/columnas duplicadas.
+2. **`supabase-optional-vip-hours.sql`** — sólo si el cliente va a usar la
+   función de "Horario VIP" (franjas fuera de horario con recargo, columnas
+   `is_vip` / `vip_surcharge` en `bookings`). Opcional; sáltalo si no aplica.
 
 Verifica en **Table Editor** que aparecieron: `services`, `specialists`
 (vía `profiles`), `bookings`, `profiles`, `products`, `deposits`,
@@ -129,14 +119,14 @@ secrets del proyecto — no hay que configurarlos a mano.
 
 Abre `src/config/business.config.ts` y llena todo con los datos del intake
 del paso 0: nombre, colores, teléfono, horario, categorías de servicio,
-staff, copy. Reemplaza los assets de `/public/klassy/*` (ver
+staff, copy. Crea `/public/brand/*` con los assets reales del cliente (ver
 `public/README-ASSETS.txt` para la lista completa y las dimensiones
-recomendadas) o déjalos como demo temporal.
+recomendadas) — el repo se dejó sin fotos de demo a propósito.
 
 Confirma que no quedó ningún dato de plantilla genérico sin llenar
-(`"Nombre del Negocio"`, `7870000000`, etc.) — hay un
-`// TODO(suitcase): ...` en cada punto del código que no se pudo mover
-100% a config; revísalos también (`grep -rn "TODO(suitcase)" src api`).
+(`"Nombre del Negocio"`, `7870000000`, etc.) — si queda algún punto del
+código que no se pudo mover 100% a config, debería tener un comentario
+`// TODO(suitcase): ...`; revísalos también (`grep -rn "TODO(suitcase)" src api`).
 
 ## 9. Cargar servicios y especialistas iniciales
 

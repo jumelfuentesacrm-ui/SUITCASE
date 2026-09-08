@@ -11,8 +11,8 @@ export const Route = createFileRoute("/servicios/pedicure")({
   head: () => ({
     meta: [
       { title: `Pedicura en ${business.legalCity} | ${business.name}` },
-      { name: "description", content: "Pedicura profesional en Carolina, PR. Sencilla con gel o color, cambio de color. Desde $15. Frente a Plaza Carolina. ⭐ 5.0." },
-      { property: "og:image", content: "/klassy/inspo-2.jpg" },
+      { name: "description", content: `Pedicura profesional en ${business.legalCity}. Sencilla con gel o color, cambio de color. Desde $15.` },
+      { property: "og:image", content: "/brand/gallery-pedicure-1.jpg" },
     ],
   }),
   component: PedicurePage,
@@ -66,11 +66,11 @@ function PedicurePage() {
       <Navbar />
       <main style={{ paddingTop: "80px" }}>
         <section className="relative flex items-end" style={{ minHeight: "clamp(260px,40vw,400px)", background: "#1a0f14", overflow: "hidden" }}>
-          <img src="/klassy/salon-pedicure.jpg" alt={`Pedicura ${business.name}`} className="absolute inset-0 w-full h-full object-cover" style={{ opacity: 0.5 }} />
+          <img src="/brand/servicios-pedicure.jpg" alt={`Pedicura ${business.name}`} className="absolute inset-0 w-full h-full object-cover" style={{ opacity: 0.5 }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,15,20,0.9) 0%, rgba(26,15,20,0.2) 100%)" }} />
           <div className="relative z-10 px-6 sm:px-10 pb-10 max-w-3xl">
             <a href="/" style={{ fontSize: 10, letterSpacing: "2px", color: "#c9a96e", fontFamily: "'Montserrat', sans-serif", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem", marginBottom: "1rem" }}>← INICIO</a>
-            <p style={{ fontSize: 9, letterSpacing: "5px", color: "#c9a96e", fontWeight: 600, fontFamily: "'Montserrat', sans-serif", marginBottom: "0.5rem" }}>KLASSY SALON · CAROLINA, PR</p>
+            <p style={{ fontSize: 9, letterSpacing: "5px", color: "#c9a96e", fontWeight: 600, fontFamily: "'Montserrat', sans-serif", marginBottom: "0.5rem" }}>{business.shortName.toUpperCase()} · {business.legalCity}</p>
             <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(34px,6vw,54px)", fontWeight: 300, color: "#fff", lineHeight: 1.1, marginBottom: "0.5rem" }}>Pedicuras</h1>
             <p style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", fontFamily: "'Montserrat', sans-serif" }}>Sencilla · Gel · Color Regular · Cambio de Color</p>
           </div>

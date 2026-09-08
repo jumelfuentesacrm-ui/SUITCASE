@@ -102,9 +102,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: business.faviconSvg, type: "image/svg+xml" },
-      { rel: "icon", href: "/klassy/icon-32.png", sizes: "32x32", type: "image/png" },
-      { rel: "icon", href: "/klassy/icon-16.png", sizes: "16x16", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/klassy/icon-180.png", sizes: "180x180" },
+      { rel: "icon", href: "/brand/icon-32.png", sizes: "32x32", type: "image/png" },
+      { rel: "icon", href: "/brand/icon-16.png", sizes: "16x16", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/brand/icon-180.png", sizes: "180x180" },
       { rel: "manifest", href: "/manifest.json" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
