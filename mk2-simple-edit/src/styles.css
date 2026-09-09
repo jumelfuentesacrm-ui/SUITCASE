@@ -133,6 +133,10 @@ a {
   color: var(--ink);
 }
 
+.hero--plain .hero__content p {
+  color: var(--ink-muted, var(--ink));
+}
+
 /* ---- Sections ---- */
 section {
   padding: 64px 0;

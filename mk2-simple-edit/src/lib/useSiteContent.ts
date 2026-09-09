@@ -15,24 +15,30 @@ export function useSiteContent() {
     let cancelled = false;
 
     async function load() {
-      const { data, error: err } = await supabase
-        .from("site_content")
-        .select("*")
-        .eq("id", ROW_ID)
-        .maybeSingle();
+      try {
+        const { data, error: err } = await supabase
+          .from("site_content")
+          .select("*")
+          .eq("id", ROW_ID)
+          .maybeSingle();
 
-      if (cancelled) return;
+        if (cancelled) return;
 
-      if (err) {
-        setError(err.message);
-        setLoading(false);
-        return;
+        if (err) {
+          setError(err.message);
+          return;
+        }
+
+        if (data) {
+          setContent({ ...DEFAULT_CONTENT, ...(data as Partial<SiteContent>) });
+        }
+      } catch (e) {
+        // Network/config failure (bad env vars, unreachable project, etc).
+        // Fall back to DEFAULT_CONTENT rather than hanging on "Cargando...".
+        if (!cancelled) setError(e instanceof Error ? e.message : String(e));
+      } finally {
+        if (!cancelled) setLoading(false);
       }
-
-      if (data) {
-        setContent({ ...DEFAULT_CONTENT, ...(data as Partial<SiteContent>) });
-      }
-      setLoading(false);
     }
 
     load();
