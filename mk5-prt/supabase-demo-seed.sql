@@ -1,5 +1,5 @@
 -- ============================================================================
--- MK2_PRT — seed de reset entre presentaciones
+-- MK5_PRT — seed de reset entre presentaciones
 -- ============================================================================
 -- Deja el proyecto de Supabase de la demo (un único proyecto, reutilizado
 -- para todas las presentaciones, una a la vez) en un estado limpio y
@@ -7,7 +7,7 @@
 -- haya dejado el admin del prospecto anterior, y vuelve a cargar catálogo
 -- placeholder consistente con `src/config/business.config.ts` por default.
 --
--- NO se usa en MK2 (por cliente) — ahí cada cliente tiene su propio proyecto
+-- NO se usa en MK5 (por cliente) — ahí cada cliente tiene su propio proyecto
 -- con datos reales que nunca se deben borrar así.
 --
 -- Uso: `npm run demo:reset` (ver scripts/demo-reset.sh) o pega el bloque

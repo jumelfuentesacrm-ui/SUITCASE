@@ -1,4 +1,4 @@
-# MK2 — Setup técnico (checklist de deploy, cliente nuevo)
+# MK5 — Setup técnico (checklist de deploy, cliente nuevo)
 
 Objetivo realista: **de cero a sitio live con reservas funcionando en menos
 de 30 min** para la parte repetible (Supabase + Vercel + rebrand). Los
@@ -219,7 +219,7 @@ deployado y cargarlos desde ahí.
 
 Cuando en el chat se escriba:
 
-> **"Hagamos un website basado en MK2"**
+> **"Hagamos un website basado en MK5"**
 
 1. Se abre este mismo template como punto de partida (no se reconstruye desde cero)
 2. Se corre el intake del paso 0 primero — si falta un dato, se pregunta, no se asume
@@ -229,7 +229,7 @@ Cuando en el chat se escriba:
    integraciones opcionales que el cliente haya pedido
 5. Se corre el checklist de calidad antes de entregar el link al cliente
 
-**Regla del template MK2 (viene del proyecto original):** si en el proceso
+**Regla del template MK5 (viene del proyecto original):** si en el proceso
 se agrega o mejora algo genuinamente reutilizable (un patrón de UI, un fix
 de bug, una integración nueva) que no es específico de ESE cliente, ese
 cambio debe reportarse para actualizarlo también aquí, en Suitcase — no se

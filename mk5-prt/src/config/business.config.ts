@@ -1,5 +1,5 @@
 // ============================================================================
-// ARCHIVO ÚNICO DE REBRAND — MK2_PRT (instancia de demo/presentación)
+// ARCHIVO ÚNICO DE REBRAND — MK5_PRT (instancia de demo/presentación)
 // Este es el ÚNICO archivo que se toca para "vestir" esta demo con los datos
 // de un prospecto antes de una presentación (ver RESKIN.md en la raíz del
 // proyecto). Nada de esto debe estar hardcodeado en ningún componente. Si
@@ -36,7 +36,7 @@ export type StaffMember = {
 };
 
 // ============================================================================
-// MK2_PRT — instancia de DEMO/PRESENTACIÓN, no un cliente real.
+// MK5_PRT — instancia de DEMO/PRESENTACIÓN, no un cliente real.
 // Este archivo debe quedarse SIEMPRE en un estado placeholder obvio cuando
 // no hay una presentación en curso. Ver ../../RESKIN.md para el flujo de
 // "vestir" esta demo con los datos de un prospecto antes de una llamada, y
@@ -176,7 +176,7 @@ export const business = {
   },
 
   // ---- Notificaciones ----
-  // MK2_PRT: sin dueño real detrás de este demo, así que las notificaciones
+  // MK5_PRT: sin dueño real detrás de este demo, así que las notificaciones
   // por email quedan apagadas por default (no hay a quién avisarle). Si en
   // una presentación específica quieres demostrar visualmente que la
   // confirmación funciona, prende sendCustomerConfirmation apuntando
@@ -189,7 +189,7 @@ export const business = {
   },
 
   // ---- Integraciones (todas apagadas por default en la demo) ----
-  // MK2_PRT no provisiona cuentas externas reales (Stripe, Google, Meta) —
+  // MK5_PRT no provisiona cuentas externas reales (Stripe, Google, Meta) —
   // estas quedan en `enabled: false` para que la UI las muestre como
   // "disponibles" sin necesitar credenciales reales. No las actives salvo
   // que armes credenciales de sandbox propias del demo, nunca del prospecto.

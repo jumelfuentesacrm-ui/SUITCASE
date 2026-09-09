@@ -1,5 +1,5 @@
 // ============================================================================
-// ARCHIVO ÚNICO DE REBRAND — MK2 (booking system completo)
+// ARCHIVO ÚNICO DE REBRAND — MK5 (booking system completo)
 // Este es el ÚNICO archivo que se debe tocar para convertir este template en
 // el sitio de un cliente nuevo. Nada de esto debe estar hardcodeado en
 // ningún componente. Si encuentras un texto, color, precio o dato de negocio

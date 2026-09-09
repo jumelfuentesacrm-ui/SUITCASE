@@ -3,7 +3,7 @@
 This file is the **one place** past-client history is allowed to live in
 this repo. It exists for style/precedent lookup only ("what did we do last
 time a client needed X") — nothing here should ever be copied back into
-`mk1-html-template/` or `mk2-booking-system/`. Those two folders must stay
+`mk1-html-template/` or `mk5-booking-system/`. Those two folders must stay
 100% free of any past-client name, asset, or content; if you're rebranding
 a new client and find yourself pasting anything from this file into either
 MK folder, stop — start from the generic placeholder in the template
@@ -15,10 +15,10 @@ repo; everything else is marked unconfirmed rather than guessed.
 ## Klassy (salon booking system)
 
 Beauty salon (nails, hair, spa) in Carolina, Puerto Rico. This is the
-origin of MK2 — the full booking system in `mk2-booking-system/` began as
+origin of MK5 — the full booking system in `mk5-booking-system/` began as
 Klassy's real production site (React 19 + TanStack Start + Supabase +
 Vercel) and was genericized into the current template. Reference for:
-the whole MK2 engine's architecture (bookings, specialists, admin panel,
+the whole MK5 engine's architecture (bookings, specialists, admin panel,
 Stripe/Google Calendar/WhatsApp/push integrations), and for salon-specific
 UX patterns (service category pages, cabinas/independent-renter pages,
 photo galleries per service).
@@ -66,7 +66,7 @@ listed here.
 ## Phenix Salon Suites
 
 Salon-suites business (independent stylists renting suites within one
-location) — conceptually close to MK2's "cabinas" (independent renters)
+location) — conceptually close to MK5's "cabinas" (independent renters)
 pattern. Stack: unknown/unconfirmed. Reference for: multi-tenant salon
 suite structure and copy — e.g. Gallery/portfolio section framing ("Your
 Personal Canvas"-style editorial language) if a client needs a similar

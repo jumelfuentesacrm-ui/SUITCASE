@@ -1,4 +1,4 @@
-ASSETS — MK2 booking system
+ASSETS — MK5 booking system
 ============================
 
 Esta carpeta se dejó A PROPÓSITO sin fotos reales. Suitcase es un template

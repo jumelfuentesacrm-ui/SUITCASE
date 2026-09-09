@@ -1,6 +1,6 @@
-# MK2_PRT — Setup de infraestructura (UNA SOLA VEZ, nunca por prospecto)
+# MK5_PRT — Setup de infraestructura (UNA SOLA VEZ, nunca por prospecto)
 
-`mk2-prt` es una instancia de **demo/presentación**, no un template que se
+`mk5-prt` es una instancia de **demo/presentación**, no un template que se
 copia por cliente. Existe **un** proyecto de Supabase y **un** proyecto de
 Vercel para esta carpeta, y se reutilizan para todas las presentaciones,
 una detrás de otra (nunca dos demos en paralelo en la misma instancia).
@@ -14,16 +14,16 @@ eso es lo que se repite en cada presentación, no esto.
 ## 1. Supabase — crear el proyecto de demo (una vez)
 
 1. [supabase.com](https://supabase.com) → **New project** → nómbralo algo
-   como `suitcase-mk2-prt-demo` para que sea obvio que no es un cliente.
+   como `suitcase-mk5-prt-demo` para que sea obvio que no es un cliente.
 2. SQL Editor → pega y corre `supabase-full-schema.sql` (el mismo schema
-   que usa MK2, sin cambios).
+   que usa MK5, sin cambios).
 3. Opcional: corre también `supabase-optional-vip-hours.sql` si quieres
    poder demostrar esa función en presentaciones.
 4. Storage → crea los buckets públicos `services`, `products`, `avatars`
-   (igual que en MK2).
+   (igual que en MK5).
 5. Authentication → Users → crea 1-2 usuarios de prueba (ej.
    `demo-admin@suitcase.internal`, `demo-specialist@suitcase.internal`) y
-   márcalos con el rol correcto en `profiles` (ver MK2 `SETUP.md` paso 7
+   márcalos con el rol correcto en `profiles` (ver MK5 `SETUP.md` paso 7
    para el SQL exacto). Estos usuarios NO se recrean por presentación —
    `demo:reset` solo les renombra el `full_name` visible.
 6. Project Settings → API → copia las keys a tu `.env.local` (ver
@@ -43,7 +43,7 @@ terceros. No actives ninguna integración con datos reales de un prospecto.
 ## 3. Deploy a Vercel (una vez)
 
 1. Vercel → **New Project** → importa el repo Suitcase, pero con **Root
-   Directory = `mk2-prt`** (así el resto del monorepo no se despliega).
+   Directory = `mk5-prt`** (así el resto del monorepo no se despliega).
 2. Environment Variables: copia `.env.example` con los valores del
    proyecto de Supabase de demo del paso 1. Dejar vacías las de
    Stripe/Google/WhatsApp/VAPID — no se usan.

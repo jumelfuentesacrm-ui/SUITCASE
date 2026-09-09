@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-# MK2_PRT — reset de datos de demo entre presentaciones
+# MK5_PRT — reset de datos de demo entre presentaciones
 #
 # Corre supabase-demo-seed.sql contra el ÚNICO proyecto de Supabase de la
 # demo (no un cliente real). Requiere psql y una variable de entorno

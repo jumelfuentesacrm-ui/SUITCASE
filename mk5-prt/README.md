@@ -1,11 +1,20 @@
-# MK2 Template — Sistema de Reservas Completo
+# MK5_PRT — Instancia de Demo/Presentación
 
-Template técnico completo, genericizado a partir del sitio real de
-producción de un salón de belleza. Stack: **React 19 + TanStack Start
-(SSR) + TanStack Router + Supabase + Tailwind v4**, deploy en **Vercel**
-(Nitro). Mucho más completo que un booking básico: incluye cobros con
-Stripe, sincronización con Google Calendar, mensajes de WhatsApp,
-notificaciones push, generación de PDF/ICS y un panel admin completo.
+**Esto NO es un template que se copia por cliente — es una única instancia
+siempre desplegada**, usada para mostrarle a un prospecto un sitio con
+reservas funcionando de verdad, antes de invertir el setup real de un
+cliente (MK5). Mismo motor que `mk5-booking-system/`, copiado una vez como
+punto de partida: **React 19 + TanStack Start (SSR) + TanStack Router +
+Supabase + Tailwind v4**, deploy en **Vercel** (Nitro).
+
+- Setup de infraestructura (Supabase + Vercel), **una sola vez**: `SETUP.md`
+- "Vestir" la demo para el próximo prospecto, **antes de cada
+  presentación**: `RESKIN.md` — léelo primero, es el flujo del día a día
+- Integraciones (Stripe, Google Calendar, WhatsApp, push) apagadas por
+  default — la demo las muestra en el admin sin necesitar cuentas reales
+  de terceros
+
+## Qué incluye
 
 ## Qué incluye
 
@@ -80,4 +89,4 @@ que estos cambios sean baratos.
 Si en el trabajo con un cliente descubres algo genuinamente reutilizable
 (un fix, un patrón nuevo, una integración) que no es específico de ese
 cliente, repórtalo para traerlo de vuelta a este template en Suitcase — ver
-la raíz del repo (`README.md`) para la regla completa de feedback MK2.
+la raíz del repo (`README.md`) para la regla completa de feedback MK5.

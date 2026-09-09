@@ -1,4 +1,4 @@
-# MK2_PRT — Reskin para una presentación (repetible, apunta a &lt;15 min)
+# MK5_PRT — Reskin para una presentación (repetible, apunta a &lt;15 min)
 
 Esto se corre **antes de cada demo/presentación a un prospecto nuevo**, no
 solo una vez. La infraestructura (Supabase, Vercel) ya existe — ver
@@ -16,10 +16,10 @@ completo** ese commit, no acumularse encima. Nunca dejes:
 - Datos de un prospecto en el historial reciente como el estado "vivo" del
   repo
 
-Trata el estado commiteado de `mk2-prt` como **siempre el último reskin**,
+Trata el estado commiteado de `mk5-prt` como **siempre el último reskin**,
 listo para ser sobrescrito por el próximo. Si necesitas guardar el "look"
-de un cliente que sí compró, eso se gradúa a su propia carpeta MK2 (ver
-`SETUP.md` de MK2) — no se queda viviendo aquí.
+de un cliente que sí compró, eso se gradúa a su propia carpeta MK5 (ver
+`SETUP.md` de MK5) — no se queda viviendo aquí.
 
 ## Qué necesitas del prospecto antes de tocar código
 
@@ -38,7 +38,7 @@ no un sitio real; no bloquees el reskin esperando activos perfectos.
 
 ### 1. Editar `src/config/business.config.ts` (5-8 min)
 
-Igual que en MK2: es el único archivo de datos de negocio. Cambia:
+Igual que en MK5: es el único archivo de datos de negocio. Cambia:
 - `name`, `shortName`, `tagline`, `legalCity`
 - `phone`/`phoneDisplay`/`whatsapp`/`email`/`address` (pueden ser
   placeholders plausibles, no hace falta que sean reales — es una demo)
@@ -124,8 +124,8 @@ Vercel redeploya solo (mismo proyecto de siempre, no uno nuevo).
 ## Después de la presentación
 
 Si el prospecto compra: la siguiente conversación es "Hagamos un website
-basado en MK2" (ver README raíz de Suitcase) — se parte de
-`mk2-booking-system/`, NO de esta carpeta, y se hace el setup real con su
+basado en MK5" (ver README raíz de Suitcase) — se parte de
+`mk5-booking-system/`, NO de esta carpeta, y se hace el setup real con su
 propio proyecto de Supabase/Vercel/dominio.
 
 Si no compra (o antes de la siguiente demo agendada): deja el repo como

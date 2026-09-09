@@ -1,5 +1,5 @@
 -- ============================================================================
--- MK2 BOOKING SYSTEM — FULL DATABASE SCHEMA
+-- MK5 BOOKING SYSTEM — FULL DATABASE SCHEMA
 -- Run this ONCE in a fresh Supabase project's SQL Editor to recreate every
 -- table this app needs. This is the single source of truth for setting up
 -- a new clone/template.

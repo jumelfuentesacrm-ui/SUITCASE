@@ -62,7 +62,7 @@ Auth state drives the admin panel: the setup form (welcome screen) is skipped if
 
 ### This copy
 
-This is the MK2 tier of the Suitcase template library — storage/reference
+This is the MK5 tier of the Suitcase template library — storage/reference
 only, never deployed from here. Per-client work happens in that client's own
 repo/clone; see `SETUP.md` for how to stand one up.
 

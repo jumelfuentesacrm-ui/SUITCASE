@@ -21,10 +21,10 @@ automáticamente vía atributos `data-*` y JS al cargar la página.
 - [ ] Probado en móvil real
 - [ ] Ningún dato de ejemplo ("Nombre del Negocio", "000-0000") quedó sin reemplazar
 
-## Cuándo usar MK1 en vez de MK2
+## Cuándo usar MK1 en vez de MK5
 
 - Cliente sin necesidad de sistema de citas/reservas → MK1
-- Cliente que necesita agendar citas, especialistas, panel admin → MK2 (`../mk2-booking-system`)
+- Cliente que necesita agendar citas, especialistas, panel admin → MK5 (`../mk5-booking-system`)
 
 ## Deploy
 
