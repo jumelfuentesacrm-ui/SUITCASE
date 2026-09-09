@@ -1,0 +1,385 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --bg: #ffffff;
+  --bg-alt: #f6f5f3;
+  --accent: #b8894f;
+  --border: #e5e2dc;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.navbar__logo {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.navbar__cta {
+  display: flex;
+  gap: 10px;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg-alt);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 640px;
+  padding: 80px 24px;
+}
+
+.hero__content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 16px;
+}
+
+.hero__content p {
+  font-size: 1.1rem;
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero--plain {
+  color: var(--ink);
+}
+
+.hero--plain .hero__content {
+  color: var(--ink);
+}
+
+/* ---- Sections ---- */
+section {
+  padding: 64px 0;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin: 0 0 12px;
+}
+
+.section__intro {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 0 36px;
+}
+
+.section--alt {
+  background: var(--bg-alt);
+}
+
+/* ---- Services ---- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.service-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---- Gallery ---- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ---- Contact / footer ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ---- Admin / Login ---- */
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-alt);
+  padding: 24px;
+}
+
+.auth-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth-card h1 {
+  font-size: 1.4rem;
+  margin: 0 0 24px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.error-text {
+  color: #b3261e;
+  font-size: 0.85rem;
+  margin: 0 0 14px;
+}
+
+.admin-shell {
+  min-height: 100vh;
+  background: var(--bg-alt);
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.admin-section {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.admin-section h2 {
+  font-size: 1.1rem;
+  margin: 0 0 18px;
+}
+
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .admin-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-row,
+.gallery-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.service-row > div,
+.gallery-row > div {
+  flex: 1;
+}
+
+.icon-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.icon-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.image-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image-field img {
+  height: 64px;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.save-bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 0;
+  background: linear-gradient(0deg, var(--bg-alt) 60%, transparent);
+}
+
+.save-status {
+  align-self: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.loading-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}

@@ -8,7 +8,7 @@ cliente y esa mejora es genérica (no específica de su negocio), se sube aquí.
 ```
 suitcase/
   mk1-html-template/       ← HTML puro, un archivo, sin backend, listo para rebrand
-  mk2-...                  ← (pendiente de construir) edición simple de fotos/texto/logo, sin roles
+  mk2-simple-edit/          ← Vite+React+Supabase, edición simple de fotos/texto/logo, sin roles
   mk3-...                  ← (pendiente de construir) formulario de contacto + panel para ver respuestas
   mk4-...                  ← (pendiente de construir) sistema de citas sencillo
   mk5-booking-system/      ← Vite+React+Supabase, sistema de reservas completo (ex-Klassy, antes MK2)
@@ -22,7 +22,7 @@ suitcase/
 | Necesidad del cliente | Tier | Estado |
 |---|---|---|
 | Solo presencia web + botón de llamar/WhatsApp | **MK1** | Ya existe (`mk1-html-template/`) |
-| Edición simple de fotos/texto/logo, sin roles | **MK2** | Pendiente de construir |
+| Edición simple de fotos/texto/logo, sin roles | **MK2** | Ya existe (`mk2-simple-edit/`) |
 | Formulario de contacto + panel para ver respuestas | **MK3** | Pendiente de construir |
 | Sistema de citas sencillo | **MK4** | Pendiente de construir |
 | Reservas, especialistas, panel admin con roles | **MK5** | Ya existe (`mk5-booking-system/`) |
@@ -40,6 +40,8 @@ nace con la versión mejorada, no con la vieja.
 ## Invocación
 
 - "Hagamos un website basado en MK1" → usar `mk1-html-template/`
+- "Hagamos un website basado en MK2" → usar `mk2-simple-edit/`, seguir su
+  `SETUP.md`
 - "Hagamos un website basado en MK5" / "abre el Suitcase" → usar
   `mk5-booking-system/`, seguir su `SETUP.md`
 - "Hagamos una demo/presentación" (o "necesito enseñarle algo a un
@@ -47,12 +49,14 @@ nace con la versión mejorada, no con la vieja.
   (la infraestructura ya existe, `SETUP.md` de esa carpeta es solo de
   referencia, se corrió una vez)
 
-Nota: MK2, MK3, MK4 y MK6 todavía no tienen template ni carpeta — cuando se
+Nota: MK3, MK4 y MK6 todavía no tienen template ni carpeta — cuando se
 construyan, su invocación se agrega aquí siguiendo el mismo patrón.
 
 ## Ver también
 
 - `mk1-html-template/README.md` — cómo rebrandear el HTML simple
+- `mk2-simple-edit/README.md` y `SETUP.md` — edición simple de fotos/texto/
+  logo vía panel `/admin` (Vite+React+Supabase)
 - `mk5-booking-system/README.md` y `SETUP.md` — cómo rebrandear y deployar
   el sistema completo (Supabase, Edge Functions, Vercel)
 - `mk5-prt/README.md`, `SETUP.md` y `RESKIN.md` — la instancia de demo:
